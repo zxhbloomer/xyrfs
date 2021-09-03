@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <name>fs</name>
-    <description>prefect parent</description>
+    <description>xyrfs parent</description>
     <!--管理所有的模块-->
     <modules>
         <module>./xyrfs-bean</module>

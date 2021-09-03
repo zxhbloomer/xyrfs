@@ -5,7 +5,7 @@ server:
     context-path: /xyrfs-manager
     session:
       cookie:
-        name: PERFECT_SESSION
+        name: XYRFS_SESSION
       timeout: 1800
   tomcat:
     max-connections: 10000
@@ -95,7 +95,7 @@ spring:
   session:
     redis:
       flush-mode: ON_SAVE
-      namespace: PERFECT_SESSION_REDIS_KEY
+      namespace: XYRFS_SESSION_REDIS_KEY
     store-type: redis
   mvc:
     dispatch-options-request: true
@@ -245,7 +245,7 @@ fs:
     fs-appid: 0
     fs-groupid: ONE
     fs-url: http://127.0.0.1:9091/xyrfs-fs/api/v1/file/upload
-    fs-username: PERFECT
+    fs-username: XYRFS
     log-print: true
     log-save-db: true
     # AOP记录用户系统日志，true开启，false关闭
