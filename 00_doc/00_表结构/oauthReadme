@@ -1,0 +1,8 @@
+http://127.0.0.1:8089/oauth/authorize?response_type=code&client_id=client&redirect_uri=http://127.0.0.1:8088&scope=select
+
+
+http://127.0.0.1:8089/oauth/token?client_id=client&client_secret=123456&grant_type=authorization_code&redirect_uri=http://127.0.0.1:8088&scope=select&code=7nSK7T
+
+http://127.0.0.1:8089/oauth/token?client_id=client&client_secret=123456&grant_type=password&username=zxh&password=123456
+
+https://blog.csdn.net/bluuusea/article/details/80284458

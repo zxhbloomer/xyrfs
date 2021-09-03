@@ -1,0 +1,94 @@
+2021-09-03 23:06:52.338 [main] INFO  c.xyrfs.managerStarter.starter.ManagerServerStart - Starting ManagerServerStart using Java 1.8.0_251 on zhangxihuadeMBP with PID 3521 (/Users/zhangxiaohua/project/spring/xyrfs/xyrfs-managerStarter/target/classes started by zhangxiaohua in /Users/zhangxiaohua/project/spring/xyrfs)
+2021-09-03 23:06:52.339 [main] INFO  c.xyrfs.managerStarter.starter.ManagerServerStart - The following profiles are active: dev
+2021-09-03 23:06:52.454 [main] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/zhangxiaohua/project/spring/maven/repository/com/mchange/c3p0/0.9.5.4/c3p0-0.9.5.4.jar referenced one or more files that do not exist: file:/Users/zhangxiaohua/project/spring/maven/repository/com/mchange/c3p0/0.9.5.4/mchange-commons-java-0.2.15.jar
+2021-09-03 23:06:52.454 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-03 23:06:52.454 [main] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-03 23:06:54.553 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-03 23:06:54.557 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-03 23:06:54.619 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2021-09-03 23:06:55.120 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'net.bull.javamelody.JavaMelodyAutoConfiguration' of type [net.bull.javamelody.JavaMelodyAutoConfiguration$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.290 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'monitoringSpringAdvisor' of type [net.bull.javamelody.MonitoringSpringAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.299 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'monitoringSpringServiceAdvisor' of type [net.bull.javamelody.MonitoringSpringAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.300 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'monitoringSpringControllerAdvisor' of type [net.bull.javamelody.MonitoringSpringAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.300 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'monitoringSpringRestControllerAdvisor' of type [net.bull.javamelody.MonitoringSpringAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.301 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'monitoringSpringAsyncAdvisor' of type [net.bull.javamelody.MonitoringSpringAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.302 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'monitoringSpringScheduledAdvisor' of type [net.bull.javamelody.MonitoringSpringAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.646 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisSessionConfiguration' of type [com.xyrfs.redis.config.RedisSessionConfiguration$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.669 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.682 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisStandaloneConfiguration' of type [org.springframework.data.redis.connection.RedisStandaloneConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:55.702 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'localPoolConfig' of type [org.apache.commons.pool2.impl.GenericObjectPoolConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:56.049 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'fs_lettuce_connection_factory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:56.069 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'fs_redis_listener_container' of type [org.springframework.data.redis.listener.RedisMessageListenerContainer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:56.602 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisKeyExpirationListener' of type [com.xyrfs.redis.listener.RedisKeyExpirationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:56.608 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'fsConfigProperies' of type [com.xyrfs.common.properies.FsConfigProperies] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:56.610 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisCacheAutoConfiguration' of type [com.xyrfs.redis.config.RedisCacheAutoConfiguration$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:56.719 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@425eb919' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:56.732 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-03 23:06:57.472 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2021-09-03 23:06:57.670 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5215 ms
+2021-09-03 23:06:59.074 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-09-03 23:06:59.076 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2021-09-03 23:06:59.097 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-03 23:06:59.098 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-09-03 23:06:59.099 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-09-03 23:06:59.099 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-03 23:06:59.099 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-03 23:06:59.099 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-09-03 23:06:59.375 [main] INFO  com.xyrfs.security.xss.XssFilter - ------------ xss filter init ------------
+2021-09-03 23:07:00.287 [main] INFO  com.zaxxer.hikari.HikariDataSource - MyHikariCP - Starting...
+2021-09-03 23:07:00.580 [main] INFO  com.zaxxer.hikari.HikariDataSource - MyHikariCP - Start completed.
+2021-09-03 23:07:01.195 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+2021-09-03 23:07:01.255 [main] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#49c6e15e:0/SimpleConnection@3edef5d7 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 51051]
+2021-09-03 23:07:01.331 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-09-03 23:07:01.332 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-03 23:07:01.332 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-09-03 23:07:01.332 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-09-03 23:07:01.332 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-03 23:07:01.332 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-03 23:07:01.332 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-09-03 23:07:01.332 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@fe17cab
+2021-09-03 23:07:01.341 [main] INFO  org.springframework.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable or auto-delete Exchange (xyrfs-default-exchange) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2021-09-03 23:07:02.718 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ced8edd4-8c8c-4f9e-ab58-b15a9bece25c
+
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/css/**'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/js/**'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/fonts/**'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/img/**'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/api/v1/imagecode'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/api/v1/sms/code'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/api/v1/signup/mobile'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/monitoring/**'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/monitoring'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/monitoring'] with []
+2021-09-03 23:07:02.832 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/actuator/monitoring/**'] with []
+2021-09-03 23:07:02.909 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [com.xyrfs.security.cors.CorsFilter@4e2308f7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e186a84, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b02b647, org.springframework.security.web.header.HeaderWriterFilter@ce1a48f, org.springframework.security.web.authentication.logout.LogoutFilter@4af4d19, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60647a88, org.springframework.security.web.session.ConcurrentSessionFilter@28d9a19, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71ecf99a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16ce63, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@66509a70, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dbed14f, org.springframework.security.web.session.SessionManagementFilter@1998cdbb, org.springframework.security.web.access.ExceptionTranslationFilter@6b2cfdef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a993595]
+2021-09-03 23:07:03.074 [main] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35730
+2021-09-03 23:07:03.202 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '/xyrfs-manager'
+2021-09-03 23:07:03.332 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2021-09-03 23:07:03.342 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 135 ms
+2021-09-03 23:07:03.356 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2021-09-03 23:07:03.408 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-03 23:07:03.505 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-09-03 23:07:03.505 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-03 23:07:04.077 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2021-09-03 23:07:04.089 [main] INFO  c.xyrfs.managerStarter.starter.ManagerServerStart - Started ManagerServerStart in 13.1 seconds (JVM running for 22.423)
+2021-09-03 23:07:04.098 [main] INFO  c.xyrfs.managerStarter.starter.ManagerServerStart - -----------------------启动完毕-------------------------
+2021-09-03 23:07:04.202 [RMI TCP Connection(2)-192.168.50.23] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-09-03 23:07:04.204 [RMI TCP Connection(2)-192.168.50.23] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2021-09-03 23:07:06.777 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.

@@ -1,0 +1,1 @@
+docker run -d --restart always --name rabbitmq --hostname dfherabbitmq2 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -v /var/rabbitmqdatavol2:/var/lib/rabbitmq/mnesia rabbitmq:3-management

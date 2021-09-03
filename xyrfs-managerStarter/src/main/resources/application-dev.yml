@@ -1,0 +1,342 @@
+#-----------------------tomcat设置---------------------------
+server:
+  port: 8088
+  servlet:
+    context-path: /xyrfs-manager
+    session:
+      cookie:
+        name: PERFECT_SESSION
+      timeout: 1800
+  tomcat:
+    max-connections: 10000
+    accept-count: 1000
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    threads:
+      # tomcat最大线程数，默认为200
+      max: 800
+      # Tomcat启动初始化的线程数，默认值25
+      min-spare: 30
+    remoteip:
+      remote-ip-header: x-forwarded-for
+      protocol-header: x-forwarded-proto
+
+
+#-----------------------spring 设置---------------------------
+spring:
+  devtools:
+    livereload:
+      port: 35730
+    restart:
+      enabled: true
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+#    addresses: 172.21.1.227:5672
+    username: admin
+    password: admin
+    virtual-host: /
+    # 开启发送确认
+#    publisher-confirms: true
+    publisher-confirm-type: correlated
+    # 开启发送失败退回
+    publisher-returns: true
+    #回调return,而不是自动删除消息
+    template:
+      mandatory: true
+    ## 消费端配置
+    listener:
+      simple:
+        ## 最大并发数
+        concurrency: 5
+        ## manual:手动 ack（确认）
+        acknowledge-mode: manual
+        ##
+        max-concurrency: 10
+        ## 限流
+        prefetch: 1
+    # 自定义
+    custom:
+      # 生产者
+      producer:
+        has-open: true
+        default-exchange: xyrfs-default-exchange
+        default-queue: xyrfs-default-queue
+        default-routing-key: xyrfs-default-routing-key.#
+      # 消费者
+      consumer:
+        has-open: false
+        default-queue: test_queue
+  profiles:
+    # 数据库设置x`
+    active: druid
+  # REDIS设置
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 1
+    # Redis服务器地址
+    host: 127.0.0.1
+    # 连接超时时间（毫秒）
+    commandtimeout: 3000
+    timeout: 5000
+    lettuce:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最小空闲连接
+        min-idle: 0
+    # Redis服务器连接密码
+    password: ''
+    # Redis服务器连接端口
+    port: 6379
+  session:
+    redis:
+      flush-mode: ON_SAVE
+      namespace: PERFECT_SESSION_REDIS_KEY
+    store-type: redis
+  mvc:
+    dispatch-options-request: true
+  servlet:
+    # multipart 上传配置
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  data:
+    # MONGO 信息配置
+    mongodb:
+      client:
+        connect-timeout: 15000
+        min-connections-per-host: 3
+        required-replica-set-name: ${mongodb.requiredReplicaSetName}
+        socket-keep-alive: true
+        socket-timeout: 15000
+      database: ${mongodb.database}
+      repositories:
+        type: auto
+      uri: ${mongodb.uri}
+  datasource:
+    tomcat:
+      # 当从连接池借用连接时，是否测试该连接.
+      test-on-borrow: false
+      # 当连接空闲时，是否执行连接测试
+      test-while-idle: true
+      # 指定空闲连接检查、废弃连接清理、空闲连接池大小调整之间的操作时间间隔
+      time-between-eviction-runs-millis: 18800
+    driverClassName: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      ##  Hikari 连接池配置
+      ## 最小空闲连接数量
+      minimum-idle: 5
+      ## 空闲连接存活最大时间，默认600000（10分钟）
+      idle-timeout: 180000
+      ## 连接池最大连接数，默认是10
+      maximum-pool-size: 10
+      ## 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      auto-commit: true
+      ## 连接池名
+      pool-name: MyHikariCP
+      ## 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      max-lifetime: 1800000
+      ## 数据库连接超时时间,默认30秒，即30000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+      db1:
+        jdbc-url: jdbc:mysql://localhost:3306/business?tinyInt1isBit=true&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+        username: root
+        password: 1q2w3e4r
+      db2:
+        # 数据源2开关/默认关闭
+        enabled: false
+        jdbc-url:
+        username:
+        password:
+
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    druid:
+#      # 主库数据源
+#      master:
+#        url: jdbc:mysql://localhost:3306/business?tinyInt1isBit=true&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&&allowPublicKeyRetrieval=true&serverTimezone=serverTimezone=Asia/Shanghai
+#        username: root
+#        password: 1q2w3e4r
+#      # 从库数据源
+#      slave:
+#        # 从数据源开关/默认关闭
+#        enabled: false
+#        url:
+#        username:
+#        password:
+#      # 初始连接数
+#      initialSize: 5
+#      # 最小连接池数量
+#      minIdle: 10
+#      # 最大连接池数量
+#      maxActive: 20
+#      # 配置获取连接等待超时的时间
+#      maxWait: 60000
+#      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+#      timeBetweenEvictionRunsMillis: 60000
+#      # 配置一个连接在池中最小生存的时间，单位是毫秒
+#      minEvictableIdleTimeMillis: 300000
+#      # 配置一个连接在池中最大生存的时间，单位是毫秒
+#      maxEvictableIdleTimeMillis: 900000
+#      # 配置检测连接是否有效
+#      validationQuery: SELECT 1
+#      testWhileIdle: true
+#      testOnBorrow: false
+#      testOnReturn: false
+#      webStatFilter:
+#        enabled: true
+#      statViewServlet:
+#        enabled: true
+#        # 设置白名单，不填则允许所有访问
+#        allow:
+#        url-pattern: /druid/*
+#        # 控制台管理用户名和密码
+#        login-username:
+#        login-password:
+#      filter:
+#        stat:
+#          enabled: true
+#          # 慢SQL记录
+#          log-slow-sql: true
+#          slow-sql-millis: 1000
+#          merge-sql: true
+#        wall:
+#          config:
+#            multi-statement-allow: true
+
+#-----------------------RestTemplateConfiguration---------
+RestTemplate-ConnectTimeout: 150000
+RestTemplate-ReadTimeout: 150000
+
+#-----------------------日志设置---------------------------
+log:
+  path: D:/spring_log/fs/manager
+  logLevel: DEBUG
+
+#-----------------------mybatis-plus 设置---------
+mybatis-plus:
+  configuration:
+    jdbc-type-for-null: 'NULL'
+    # mybatis sql日志输出
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭驼峰
+    map-underscore-to-camel-case: false
+    # null 也返回
+    call-setters-on-nulls: true
+  global-config:
+    db-config:
+      id-type: AUTO
+      insertStrategy: ignored
+      update-strategy: ignored
+  mapper-locations: 'classpath:/mapper/*Mapper '
+  type-handlers-package: com.xyrfs.core.config.mybatis.typehandlers
+
+
+#-----------------------Fs  Configuration---------
+fs:
+  config:
+    # 文件上传路径
+    fs-appid: 0
+    fs-groupid: ONE
+    fs-url: http://127.0.0.1:9091/xyrfs-fs/api/v1/file/upload
+    fs-username: PERFECT
+    log-print: true
+    log-save-db: true
+    # AOP记录用户系统日志，true开启，false关闭
+    sys-log: true
+    # AOP记录用户操作日志，true开启，false关闭
+    operate-log: true
+    # AOP记录用户操作日志: true详细日志，不区分更改前更改后，数据量较大，false简单日志，只记录当前变更过的数据，数据量较小
+    operate-log-all: true
+
+    # 错误日志输出简单模式
+    simple-model: true
+    # redis 缓存过期时间min
+    redis-cache-expired-min: 30
+  security:
+    # 免认证资源路径
+    anon-resources-url: /css/**,/js/**,/fonts/**,/img/**,/api/v1/imagecode,/api/v1/sms/code,/api/v1/signup/mobile,/monitoring/**,/monitoring,/actuator/monitoring,/actuator/monitoring/**
+    code:
+      image:
+        # 验证码相关配置，以下资源需要验证图形验证码，生成图形验证码的请求 ，
+        create-url: /api/v1/captcha/captchaImage
+        # 验证码相关配置，图形验证码失效时间
+        expire-in: 60
+        # 验证码相关配置，图形验证码高度，单位 px
+        height: 36
+        # 验证码相关配置，图形验证码由字符位数
+        length: 4
+        # 验证码相关配置，以下资源需要验证图形验证码，对应图形验证码登录页面 form表单的 action属性
+        login-processing-url: /api/v1/user/token/get
+        # 验证码相关配置，以下资源需要验证图形验证码，哪些地址是需要图片验证码进行验证的
+        url:
+        # 验证码相关配置，图形验证码图片长度，单位 px
+        width: 148
+        # 支持字符验证和计算式验证：math，char
+        captcha-type: math
+      sms:
+        # 验证码相关配置，短信验证码相关配置，以下资源需要短信验证码验证，生成短信验证码的请求 url
+        create-url: /api/v1/sms/code/check
+        # 验证码相关配置，短信验证码相关配置，短信验证码的有效时间，单位为秒
+        expire-in: 300
+        # 验证码相关配置，短信验证码相关配置，短信验证码字符位数
+        length: 4
+        # 验证码相关配置，短信验证码相关配置，以下资源需要短信验证码验证，对应短信验证码登录页面 form表单的 action属性
+        login-processing-url: /mobile/login
+        # 验证码相关配置，短信验证码相关配置，以下资源需要短信验证码验证
+        url: /api/v1/sms/code/check
+        # 短信运营商请求参数
+        api-uri: http://222.73.117.158/msg/HttpBatchSendSM
+        account: VIP-yrgyl8
+        pswd: Tch922973
+    # session过期后自动获取
+    create-new-session: false
+    # 开发者模式，可以跳过验证码
+    develop-model: true
+    # 首页路径
+    index-url: /index
+    # 登录路径
+    login-url: /login
+    # 登出路径
+    logout-url: /api/v1/logout
+    # 记住我有效时间，单位为秒
+    remember-me-timeout: 3600
+    session:
+      # 同一个账号最大并发登录数量，超出这个数量后，后者踢掉前者
+      maximum-sessions: 1
+
+
+#-----------------------javamelody 系统监控工具 Configuration---------
+#-----------------------http://localhost:8081/actuator/monitoring---------
+management.server.port: 8081
+management.endpoints.web.exposure.include: info,health,monitoring
+javamelody:
+  # Enable JavaMelody auto-configuration (optional, default: true)
+  enabled: true
+  # Data source names to exclude from monitoring (optional, comma-separated)
+  excluded-datasources: secretSource,topSecretSource
+  # Enable monitoring of Spring services and controllers (optional, default: true)
+  spring-monitoring-enabled: true
+  management-endpoint-monitoring-enabled: true
+  # Initialization parameters for JavaMelody (optional)
+  # See: https://github.com/javamelody/javamelody/wiki/UserGuide#6-optional-parameters
+  init-parameters:
+    # log http requests:
+    log: true
+    authorized-users: admin:password
+    # to exclude images, css, fonts and js urls from the monitoring:
+    #url-exclude-pattern: (/webjars/.*|/css/.*|/images/.*|/fonts/.*|/js/.*)
+    # to aggregate digits in http requests:
+    #http-transform-pattern: \d+
+    # to add basic auth:
+    #authorized-users: admin:pwd
+    # to change the default storage directory:
+    #storage-directory: /tmp/javamelody
+    # to change the default "/monitoring" path:
+    #monitoring-path: /admin/performance

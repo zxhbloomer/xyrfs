@@ -1,0 +1,14 @@
+CREATE TABLE `sys_client` (
+  `appId` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `resourceIds` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `appSecret` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `scope` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `grantTypes` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `redirectUrl` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `authorities` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `accessTokenValidity` int(11) DEFAULT NULL,
+  `refreshTokenValidity` int(11) DEFAULT NULL,
+  `additionalInformation` text COLLATE utf8mb4_bin,
+  `autoApproveScopes` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`appId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin
