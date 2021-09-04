@@ -1,4 +1,4 @@
-package com.xyrfs.mongo.model;
+package com.xyrfs.filemanager.model;
 
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;

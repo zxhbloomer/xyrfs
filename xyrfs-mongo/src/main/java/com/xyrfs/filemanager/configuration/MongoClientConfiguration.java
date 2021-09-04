@@ -1,4 +1,4 @@
-package com.xyrfs.mongo.configuration;
+package com.xyrfs.filemanager.configuration;
 
 import com.mongodb.MongoClientSettings;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;

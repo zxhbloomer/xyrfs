@@ -1,4 +1,4 @@
-package com.xyrfs.mongo.constant;
+package com.xyrfs.filemanager.constant;
 
 /**
  * Copyright (C), 2018, Banyan Network Foundation

@@ -28,6 +28,7 @@
         <module>./xyrfs-excel</module>
         <module>./xyrfs-framework</module>
         <module>./xyrfs-mq</module>
+        <module>./xyrfs-filemanager</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -402,6 +403,60 @@
                 <artifactId>javamelody-spring-boot-starter</artifactId>
                 <version>1.85.0</version>
             </dependency>
+
+            <dependency>
+                <groupId>commons-configuration</groupId>
+                <artifactId>commons-configuration</artifactId>
+                <version>1.10</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>3.8.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>0.1.55</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-common</artifactId>
+                <version>3.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>3.13.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sshtools</groupId>
+                <artifactId>j2ssh-maverick</artifactId>
+                <version>1.5.5</version>
+            </dependency>
+            <dependency>
+                <groupId>sshtools</groupId>
+                <artifactId>j2ssh-core</artifactId>
+                <version>0.2.9</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qcloud</groupId>
+                <artifactId>cos_api</artifactId>
+                <version>5.6.54</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qiniu</groupId>
+                <artifactId>qiniu-java-sdk</artifactId>
+                <version>[7.7.0, 7.7.99]</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-coyote</artifactId>
+                <version>10.0.10</version>
+            </dependency>
+
+
+
             <!-- prefect 模块 -->
             <dependency>
                 <groupId>com.xyrfs</groupId>

@@ -1,4 +1,4 @@
-package com.xyrfs.mongo.model;
+package com.xyrfs.filemanager.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

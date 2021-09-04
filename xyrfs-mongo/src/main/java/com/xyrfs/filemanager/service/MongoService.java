@@ -1,7 +1,7 @@
-package com.xyrfs.mongo.service;
+package com.xyrfs.filemanager.service;
 
 import com.xyrfs.common.utils.md5.MD5Util;
-import com.xyrfs.mongo.model.MongoRecord;
+import com.xyrfs.filemanager.model.MongoRecord;
 import org.apache.commons.lang3.time.StopWatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

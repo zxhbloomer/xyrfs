@@ -1,4 +1,4 @@
-package com.xyrfs.mongo.configuration;
+package com.xyrfs.filemanager.configuration;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
