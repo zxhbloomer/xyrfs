@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 接口限流注解，示例见 com.xyrfs.manager.controller.code.image.SysSmsCodeController
+ * 接口限流注解，示例见 com.perfect.manager.controller.code.image.SysSmsCodeController
  * @author Administrator
  */
 @Target(ElementType.METHOD)
